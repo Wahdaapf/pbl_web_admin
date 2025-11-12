@@ -6,9 +6,9 @@
   <h2>Page not found!</h2>
   <br>
   <a href="<?=ROOT?>"
-    hx-get="<?=ROOT?>/home"
+    hx-get="<?=ROOT?>/login"
     hx-target="#page_content_container"
     hx-swap="outerHTML"
     hx-push-url="<?=ROOT?>"
-    hx-indicator="#loading">Return to Home</a>
+    hx-indicator="#loading">Return to Login</a>
 </center>
