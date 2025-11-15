@@ -1,5 +1,3 @@
-<?php echo "INI VIEW HOME"; ?>
-
 <div class="page-loader">
     <div class="bg-primary"></div>
 </div>
@@ -1059,7 +1057,7 @@
                                 <a href="javascript:" class="dropdown-item">
                                     <i class="feather icon-settings text-muted"></i> &nbsp; Account settings</a>
                                 <div class="dropdown-divider"></div>
-                                <a href="javascript:" class="dropdown-item">
+                                <a href="<?= ROOT ?>/logout" class="dropdown-item">
                                     <i class="feather icon-power text-danger"></i> &nbsp; Log Out</a>
                             </div>
                         </div>
@@ -1073,7 +1071,7 @@
                 <!-- [ content ] Start -->
                 <div class="container-fluid flex-grow-1 container-p-y">
                     <div class="page-title">
-                        <h4 class="">Dashboard</h4>
+                        <h4 class="">Dashboard <?= $_SESSION['email'] ?></h4>
                         <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i></a></li>

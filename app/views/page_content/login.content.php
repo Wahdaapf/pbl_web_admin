@@ -1,4 +1,8 @@
-<title>Home - <?= APP_NAME ?></title>
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
 
 <div class="page-loader">
         <div class="bg-primary"></div>
@@ -6,8 +10,8 @@
     <!-- [ Preloader ] End -->
 
     <!-- [ Content ] Start -->
-    <div class="authentication-wrapper authentication-2 ui-bg-cover ui-bg-overlay-container px-4" style="background-image: url('assets/img/bg/1.jpg');">
-        <div class="ui-bg-overlay bg-dark opacity-25"></div>
+    <div class="authentication-wrapper authentication-2 ui-bg-cover ui-bg-overlay-container px-4">
+        <div class="ui-bg-overlay bg-light opacity-75"></div>
 
         <div class="authentication-inner py-5">
 
@@ -27,26 +31,21 @@
                     <h5 class="text-center text-muted font-weight-normal mb-4">Login to Your Account</h5>
 
                     <!-- Form -->
-                    <form>
+                    <form action="login" method="POST">
                         <div class="form-group">
                             <label class="form-label">Email</label>
-                            <input type="text" class="form-control">
+                            <input type="email" name="email" placeholder="Email" class="form-control" required />
                             <div class="clearfix"></div>
                         </div>
                         <div class="form-group">
                             <label class="form-label d-flex justify-content-between align-items-end">
                                 <span>Password</span>
-                                <a href="pages_authentication_password-reset.html" class="d-block small">Forgot password?</a>
                             </label>
-                            <input type="password" class="form-control">
+                            <input type="password" name="password" placeholder="Password" class="form-control" required />
                             <div class="clearfix"></div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center m-0">
-                            <label class="custom-control custom-checkbox m-0">
-                                <input type="checkbox" class="custom-control-input">
-                                <span class="custom-control-label">Remember me</span>
-                            </label>
-                            <button type="button" class="btn btn-primary">Sign In</button>
+                            <button type="submit" class="btn btn-primary w-100">Sign In</button>
                         </div>
                     </form>
                     <!-- [ Form ] End -->
